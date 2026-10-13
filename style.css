@@ -1,0 +1,109 @@
+:root{--paper:#f4f5f3;--white:#fff;--ink:#14213d;--ink2:#3a4660;--line:#d5d9de;--tile:#e7ecf1;--ok:#1f7a45;--bad:#b3261e;--wait:#9a6700}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Work Sans",system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:"Playfair Display",Georgia,serif;font-weight:500;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid #4c7be0;outline-offset:2px}
+
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px max(16px,calc((100% - 1120px)/2 + 32px));background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.logo{font-size:28px;text-decoration:none;font-weight:700}
+nav{display:flex;gap:28px;align-items:center}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{text-decoration:underline}
+.cart span{display:inline-block;min-width:22px;height:22px;margin-left:8px;border-radius:11px;background:var(--ink);color:#fff;font-size:13px;line-height:22px;text-align:center}
+
+main{max-width:1120px;margin:0 auto;padding:0 clamp(16px,4vw,32px) 72px}
+h2{font-size:32px;margin:56px 0 24px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0 24px}
+.hero h1{font-size:clamp(32px,4.4vw,48px);max-width:17ch;line-height:1.2}
+.hero p{max-width:46ch;color:var(--ink2);margin:20px 0 28px}
+.hero-art{display:flex;align-items:flex-end;justify-content:center;gap:6px;background:var(--tile);padding:32px 16px 24px;min-height:300px}
+.hero-art .bottle:nth-child(2){width:46%;margin-bottom:0}
+.hero-art .bottle{width:30%}
+
+.btn,button{display:inline-block;background:var(--ink);color:#fff;border:0;padding:12px 24px;font:500 15px "Work Sans",sans-serif;cursor:pointer;text-decoration:none;border-radius:2px}
+.btn:hover,button:hover{background:#243659}
+button.danger{background:var(--bad)}
+button.link{background:none;color:var(--bad);padding:0;text-decoration:underline}
+.small-btn{padding:9px 16px}
+
+.catalog{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);background:var(--white)}
+.item{display:flex;flex-direction:column;padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tile{background:var(--tile);padding:20px;display:flex;justify-content:center;margin-bottom:18px}
+.bottle{width:110px;height:auto;display:block}
+.item h3{font-size:21px}
+.desc{color:var(--ink2);font-size:15px;margin:8px 0 18px;flex:1}
+.buy{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.price{font-weight:600;font-size:18px}
+
+table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line)}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-weight:600;background:#eef0f2}
+.form{display:flex;flex-direction:column;gap:12px;max-width:460px}
+.form input:not([type=radio]){padding:12px;border:1px solid #aab2bd;background:#fff;font:inherit;border-radius:2px}
+.form label{display:flex;gap:10px;align-items:center;padding:12px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.form button{margin-top:8px}
+.box{background:var(--white);border:1px solid var(--line);padding:24px;max-width:520px}
+.box p{margin:8px 0}
+.paid{color:var(--ok)}.failed{color:var(--bad)}.pending{color:var(--wait)}
+main>h1{font-size:34px;margin:48px 0 20px}
+
+footer{background:var(--ink);color:#dfe5ee;padding:40px max(16px,calc((100% - 1120px)/2 + 32px))}
+footer strong{font-family:"Playfair Display",serif;font-size:22px;color:#fff}
+footer p{margin:6px 0;max-width:60ch}.small{font-size:13px;opacity:.7}
+
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:40px}.catalog{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.catalog{grid-template-columns:1fr}nav{gap:16px}.top{padding:14px 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ===== Chai 3D ===== */
+.hero-art{display:block;padding:16px 16px 20px;text-align:center}
+#hero3d{height:380px;position:relative;cursor:grab;touch-action:pan-y}
+#hero3d.grab{cursor:grabbing}
+#hero3d canvas{display:block;width:100%;height:100%}
+#hero3d .fallback{display:flex;align-items:flex-end;justify-content:center;gap:6px;height:100%;padding-bottom:16px}
+#hero3d .fallback .bottle{width:30%}
+#hero3d.ready .fallback{display:none}
+.swatches{display:flex;justify-content:center;gap:12px;margin-top:8px}
+.dot{width:28px;height:28px;border-radius:50%;padding:0;border:2px solid #fff;box-shadow:0 0 0 1px var(--ink2)}
+.dot:hover{background-blend-mode:normal;transform:scale(1.12)}
+.hint{margin:10px 0 0;font-size:13px;color:var(--ink2)}
+@media(max-width:520px){#hero3d{height:300px}}
+
+/* ===== Ảnh sản phẩm thật ===== */
+.tile:has(.photo){padding:0}
+.photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+
+/* ===== Nhiều trang ===== */
+nav a.on{border-bottom:2px solid var(--ink);padding-bottom:2px}
+.page-head{padding:56px 0 12px}
+.page-head h1{font-size:clamp(32px,4.4vw,46px)}
+.page-head p{color:var(--ink2);margin:12px 0 28px;max-width:56ch}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.sec-head h2{margin-bottom:24px}
+.sec-head a{font-weight:500}
+.teaser,.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;margin-top:64px}
+.teaser>*,.story>*{min-width:0}
+.teaser h2,.story h2{margin:0 0 16px}
+.teaser p,.story p{color:var(--ink2);max-width:52ch;margin:0 0 24px}
+.story{margin-top:40px}.story p{margin:0}
+.story.flip .tile{order:2}
+.teaser .tile,.story .tile{margin:0;padding:32px}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.notes>div{background:var(--white);border:1px solid var(--line);padding:24px}
+.notes span{font:500 28px "Playfair Display",serif;color:var(--ink2)}
+.notes h3{font-size:20px;margin:8px 0}.notes p{margin:0;color:var(--ink2);font-size:15px}
+.contact{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:760px}
+.contact .box{max-width:none}.contact h3{font-size:18px;margin-bottom:6px}.contact p{margin:0}
+.fnav{display:flex;gap:20px;flex-wrap:wrap;margin:14px 0}.fnav a{color:#dfe5ee}
+@media(max-width:860px){.teaser,.story{grid-template-columns:1fr}.story.flip .tile{order:0}.notes{grid-template-columns:1fr}}
+@media(max-width:620px){.top{flex-wrap:wrap;gap:10px}nav{gap:14px;flex-wrap:wrap;font-size:14px}.contact{grid-template-columns:1fr}}
+.small-note{margin-top:40px;font-size:13px;color:var(--ink2)}
+
+/* Ảnh thay thế */
+.tile:has(.slot){padding:0}
+.slot{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+
+.tile:has(.slot),.story .tile:has(.slot),.teaser .tile:has(.slot){padding:0;overflow:hidden}
+.slot{max-width:100%;height:auto;max-height:460px}

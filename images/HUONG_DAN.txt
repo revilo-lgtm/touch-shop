@@ -1,0 +1,5 @@
+Trang chủ dùng images/overview-wide.jpg (ảnh toàn cảnh + nền mở rộng).
+Ảnh chi tiết khi bấm vào sản phẩm (đặt tên theo id sản phẩm):
+  3d-7.png / 3d-7.jpg  -> Creamy Tide      3d-2 -> Purple Rice      3d-4 -> Lush Garden
+  Muốn thêm ảnh khác của cùng sản phẩm: detail-7-2.jpg, detail-7-3.jpg ... (tự hiện chấm để đổi ảnh)
+Ảnh danh sách sản phẩm: product-<id>.jpg (tỉ lệ 4:5), id 1 đến 7.
