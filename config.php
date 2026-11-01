@@ -2,7 +2,7 @@
 session_start();
 // ===== THÔNG TIN DATABASE: khi đưa lên hosting, chỉ cần sửa 4 dòng này =====
 $DB_HOST = 'localhost';
-$DB_NAME = 'documents_shop';
+$DB_NAME = 'touch_shop';
 $DB_USER = 'root';
 $DB_PASS = '';
 $DEBUG   = true;   // đặt false khi chạy thật để không lộ thông tin lỗi

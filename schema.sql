@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS documents_shop CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE documents_shop;
+CREATE DATABASE IF NOT EXISTS touch_shop CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE touch_shop;
 
 CREATE TABLE products (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -31,9 +31,9 @@ CREATE TABLE order_items (
 );
 
 INSERT INTO products (name, description, price) VALUES
-('Documents No.1 - Ink', 'Hương gỗ tuyết tùng, mực in và hổ phách', 1250000),
-('Documents No.2 - Paper', 'Hương xạ hương trắng, giấy mới và hoa lily', 1180000),
-('Documents No.3 - Archive', 'Hương da thuộc, vani và gỗ đàn hương', 1450000),
-('Documents No.4 - Linen', 'Hương cam bergamot, vải lanh và trà xanh', 990000),
-('Documents No.5 - Library', 'Hương trầm, sách cũ và hoắc hương', 1520000),
-('Documents No.6 - Dawn', 'Hương hoa nhài, đào và xạ hương', 1090000);
+('Silent Heirloom', 'Eau de Parfum, hương nhựa gỗ, gỗ đàn hương và vani êm dịu', 2090000),
+('Purple Rice', 'Eau de Parfum, sữa gạo, cánh hoa tím và iris', 2090000),
+('Naughty Paper', 'Eau de Parfum, da thuộc, nhang và gỗ cedar ấm', 2090000),
+('Lush Garden', 'Eau de Parfum, bergamot, trà xanh và lá sung', 2090000),
+('Innocent Skin', 'Eau de Parfum, musk trắng, gỗ đàn hương và hoa đào', 2090000),
+('L''Amant', 'Eau de Toilette, neroli, hoa cam và hổ phách ấm', 420000);
