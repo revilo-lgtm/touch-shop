@@ -30,10 +30,11 @@ CREATE TABLE order_items (
   FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
-INSERT INTO products (name, description, price) VALUES
-('Silent Heirloom', 'Eau de Parfum, hương nhựa gỗ, gỗ đàn hương và vani êm dịu', 2090000),
-('Purple Rice', 'Eau de Parfum, sữa gạo, cánh hoa tím và iris', 2090000),
-('Naughty Paper', 'Eau de Parfum, da thuộc, nhang và gỗ cedar ấm', 2090000),
-('Lush Garden', 'Eau de Parfum, bergamot, trà xanh và lá sung', 2090000),
-('Innocent Skin', 'Eau de Parfum, musk trắng, gỗ đàn hương và hoa đào', 2090000),
-('L''Amant', 'Eau de Toilette, neroli, hoa cam và hổ phách ấm', 420000);
+INSERT INTO products (id, name, description, price) VALUES
+(1, 'Silent Heirloom', 'Hương gỗ đàn hương, nhựa thơm và vani êm — ấm, trầm, như kỷ vật được giữ rất lâu.', 2090000),
+(2, 'Purple Rice', 'Khoai môn, xôi nếp và hoa violet phấn mịn, kết sữa dừa — mộc mạc mà thanh nhã.', 2090000),
+(3, 'Naughty Paper', 'Da thuộc, nhang và cedar ấm — sắc, hơi bướng, như trang giấy vừa viết xong.', 2090000),
+(4, 'Lush Garden', 'Hoa súng, huệ trắng và đất sau mưa — xanh mát, trong trẻo như góc vườn vừa tạnh.', 2090000),
+(5, 'Innocent Skin', 'Xạ hương trắng, gỗ đàn hương và hoa đào — sạch, gần da, như làn da vừa dưỡng.', 2090000),
+(6, 'L''Amant', 'Neroli, hoa cam và hổ phách ấm — tươi sáng ban ngày, dịu lại khi chiều về.', 420000),
+(7, 'Creamy Tide', 'Vải, đào và sữa gạo béo mịn — chậm rãi như buổi chiều sông nước miền Tây.', 2090000);
