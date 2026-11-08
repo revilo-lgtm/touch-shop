@@ -1,7 +1,7 @@
 <?php require 'config.php'; require 'payment_gateway.php';
 $cart = $_SESSION['cart'] ?? [];
 $method = $_POST['payment_method'] ?? '';
-if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !$cart || !in_array($method, ['ATM','MoMo','COD'], true)) {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !$cart || !in_array($method, ['ATM','MoMo','VNPay','COD'], true)) {
     header('Location: cart.php'); exit;
 }
 // Tính tiền từ database, không tin dữ liệu từ trình duyệt.

@@ -242,7 +242,7 @@ body.sel .top{transform:translateY(-110%);opacity:0;visibility:hidden;pointer-ev
     <div class="notes steps">
       <div><span>01</span><h3>Chọn mùi hương</h3><p>Xem câu chuyện và tầng hương của từng sản phẩm.</p></div>
       <div><span>02</span><h3>Thêm vào giỏ</h3><p>Kiểm tra giỏ hàng và nhập thông tin giao hàng.</p></div>
-      <div><span>03</span><h3>Thanh toán</h3><p>Chọn thẻ ATM, ví MoMo hoặc thanh toán khi nhận hàng.</p></div>
+      <div><span>03</span><h3>Thanh toán</h3><p>Chọn thẻ ATM, ví MoMo, VNPay hoặc thanh toán khi nhận hàng.</p></div>
     </div>
     <p style="margin:32px 0 0"><a class="btn" href="products.php">Khám phá sản phẩm</a></p>
   </section>
