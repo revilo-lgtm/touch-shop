@@ -1,5 +1,5 @@
 <?php
-// 'momo' = dùng cổng MoMo sandbox (môi trường thử nghiệm) ; 'fake' = dùng cổng giả lập cũ (fake_gateway.php)
+// 'momo' = ATM/MoMo qua MoMo sandbox ; 'fake' = cổng giả lập (không ảnh hưởng VNPay)
 const PAYMENT_MODE = 'momo';
 
 function momo_config(): array {
@@ -13,5 +13,14 @@ function momo_config(): array {
            partnerCode MOMOBKUN20180529 | accessKey klm05TvNBzhg7h7j | secretKey at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa */
         // Máy XAMPP hay thiếu chứng chỉ SSL nên tạm tắt kiểm tra cho sandbox. Khi chạy thật PHẢI đặt true.
         'verify_ssl'  => false,
+    ];
+}
+
+function vnpay_config(): array {
+    return [
+        // Sandbox — đăng ký tại https://sandbox.vnpayment.vn/devreg/
+        'url'        => 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html',
+        'tmnCode'    => '2EZHFIAR',
+        'hashSecret' => 'RTEFQRXABKIHRDKOFFXTGDBQILHQAXBM',
     ];
 }

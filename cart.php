@@ -40,8 +40,9 @@ if ($cart) {
   <input name="customer_name" placeholder="Họ tên" required>
   <input name="phone" placeholder="Số điện thoại" required pattern="[0-9]{9,11}">
   <input name="address" placeholder="Địa chỉ giao hàng" required>
-  <label><input type="radio" name="payment_method" value="ATM" required> Thẻ ATM nội địa</label>
+  <label><input type="radio" name="payment_method" value="ATM" required> Thẻ ATM nội địa (MoMo)</label>
   <label><input type="radio" name="payment_method" value="MoMo"> Ví MoMo</label>
+  <label><input type="radio" name="payment_method" value="VNPay"> VNPay</label>
   <label><input type="radio" name="payment_method" value="COD"> Thanh toán khi nhận hàng</label>
   <button>Đặt hàng</button>
 </form>
